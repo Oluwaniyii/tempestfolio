@@ -1,10 +1,21 @@
 <!-- Header -->
 <%- include('../includes/header.ejs') %>
 
+<!--  specific page addons -->
+<script src="/build/ckeditor.js"></script>
+<!--  specific page addons -->
+
+<script src="/js/ckeditorinit.js"></script>
+<script>
+  newCkeditor('addExperienceEditor', 'add--experience--description');
+  newCkeditor('editExperienceEditor', 'edit--experience--description');
+</script>
+
 <!-- Setting global Javascript variables -->
 <script>
   const app_home_url = "<%= globals.app_home_url %>";
 </script>
+
 <div class="app-main__inner">
   <!-- titile -->
   <!-- titile -->
@@ -49,6 +60,6 @@
   <!-- Main -->
   <!-- Main -->
 </div>
-
+<!-- Foot -->
 <!-- Foot -->
 <%- include('../includes/foot.ejs') %>

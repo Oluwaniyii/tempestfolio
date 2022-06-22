@@ -101,7 +101,7 @@
                 <label for="exampleText" class="">Take</label
                 ><textarea
                     name="experience"
-                    id="service--description"
+                    id="add--experience--description"
                     class="form-control"
                     rows="10"
                     style="
@@ -155,7 +155,8 @@
 
  function addExperience(){
    let serializedData;
-   const {title, icon, company, company_link, from, to, experience} = serializedData = serialize("#add-experience", "json");
+   const {title, icon, company, company_link, from, to} = serializedData = serialize("#add-experience", "json");
+   const experience = getCkeditorData('addExperienceEditor', true);
 
    if(!title || !icon || !company || !from, !to, !experience)  {
       return alert("Title, Icon, Company, From, To and Experience field are required");
@@ -169,7 +170,6 @@
         if(this.status > 399) return alert(`Error adding ${title}`);
 
         const responseData =JSON.parse(this.responseText);
-        // if(!responseData.status) return alert(`Error adding ${title}`);
 
         alert(`Added ${title} successfully`);
         loadPage();

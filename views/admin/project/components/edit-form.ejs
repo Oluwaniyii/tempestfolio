@@ -153,7 +153,7 @@
         const projectImage3 = document.getElementById('project-img-3').files[0];
         const projectTitle = document.getElementById('project-title').value.trim();
         const projectCategory = document.getElementById('project-category').value.trim();
-        const projectDescription = getCkeditorData(true); // use Ckeditor to get project description
+        const projectDescription = getCkeditorData('editProjectEditor', true); // use Ckeditor to get project description
         const projectVideoLink = document.getElementById('project-video-link').value.trim();
         const projectGithubLink = document.getElementById('project-github-link').value.trim();
         const projectExternalUrl = document.getElementById('project-external-url').value.trim();

@@ -304,7 +304,7 @@ function loadEditProject(projectId){
      editVideoLink.value = video || "";
      editGithubLink.value = github || "";
      editExternalUrl.value = externalUrl || "";
-     editDescription.innerHTML = description ? window.ckeditor.data.set(parseCkescapedData(description)) : "";
+    //  editDescription.innerHTML = description ? setCkeditorDefaultdata('editProjectEditor', parseCkescapedData(description)) : "";
 
      // tags
      console.log("Tags");
@@ -413,13 +413,6 @@ function getActiveTags(){
     })
 
     return activeTags;
-}
-
-function parseCkescapedData(data){
-    let parseData = data.replace(/&lt;/g, '<');
-    parseData = parseData.replace(/&gt;/g, '>');
-
-    return parseData;
 }
 
 loadEditProject(projectId);

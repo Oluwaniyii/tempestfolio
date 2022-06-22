@@ -184,7 +184,8 @@
         editExpFrom.value = from;
         editExpTo.value = to;
 
-        editExpDesc.append(`${experience}`);
+        // load ckeditor data
+        editExpDesc.innerHTML = description ? setCkeditorDefaultdata('editExperienceEditor', parseCkescapedData(description)) : "";
         editExpButton.setAttribute("onclick", `saveEditExperience('${_id}')`);
 
     }
@@ -192,7 +193,9 @@
 
  function saveEditExperience(experienceID){
     let serializedData;
-   const {title, icon, company, company_link, from, to, experience} = serializedData = serialize("#edit--experience", "json");
+    const {title, icon, company, company_link, from, to} = serializedData = serialize("#edit--experience", "json");
+    const experience = getCkeditorData('editExperienceEditor', true);
+    
 
    if(!title || !icon || !company || !from, !to, !experience)  {
       return alert("Title, Icon, Company, From, To and Experience field are required");

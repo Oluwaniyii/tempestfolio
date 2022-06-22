@@ -1,6 +1,6 @@
 {
     "app_name": "temportfolio",
-    "app_home_url": "https://temportfolio.herokuapp.com",
+    "app_home_url": "http://localhost:3000",
     "auth_path":{
         "login": "/auth/login",
         "setup": "/auth/setup",

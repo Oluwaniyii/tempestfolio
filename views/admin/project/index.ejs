@@ -5,6 +5,11 @@
 <script src="/build/ckeditor.js"></script>
 <!--  specific page addons -->
 
+<script src="/js/ckeditorinit.js"></script>
+<script>
+    newCkeditor('addProjectEditor', 'project-description');
+</script>
+
 <!-- Setting global Javascript variables -->
 <script>
     const app_home_url = "<%= globals.app_home_url %>";
@@ -60,35 +65,5 @@
     <!-- Main -->
     <!-- Main -->
 </div>
-
-<script>
-    // Ckeditor build
-    ClassicEditor.create( document.querySelector( '.--use-ckeditor' ), {
-        licenseKey: '',
-	} )
-    .then( ckeditor => {
-        window.ckeditor = ckeditor;
-    } )
-    .catch( error => {
-        console.error( 'Oops, something went wrong!' );
-        console.error( 'Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:' );
-        console.warn( 'Build id: 6ipdhxgd5iyr-ai837debbwht' );
-        console.error( error );
-    } );
-
-
-    function getCkeditorData(escaped=false){
-    let ckeditorData = window.ckeditor.getData({format: 'string'});
-
-    if(escaped){
-        ckeditorData = ckeditorData.replace(/"/g, '\"');
-        ckeditorData = ckeditorData.replace(/</g, '&lt;');
-        ckeditorData = ckeditorData.replace(/>/g, '&gt;');
-    }
-
-        return ckeditorData;
-    }
-</script>
-
 <!-- Foot -->
 <%- include('../includes/foot.ejs') %>
