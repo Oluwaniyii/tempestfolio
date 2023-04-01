@@ -1,120 +1,118 @@
 section#hero {
-	display: block;
-	position: relative;
-	padding: 10px;
-	background-color: rgb(2, 7, 21);
-	background-attachment: scroll;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+  display: block;
+  position: relative;
+  padding: 10px;
+  background-color: rgb(2, 7, 21);
+  background-attachment: scroll;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 section#hero > * {
-	-webkit-transition: all 0.5s ease-out;
-	transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
-section#hero .background .img{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+section#hero .background .img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-section#hero .background .img img{
-	animation: rotate 3s linear infinite forwards;
-	transform-origin: center;
-	width: 400px
+section#hero .background .img img {
+  animation: rotate 3s linear infinite forwards;
+  transform-origin: center;
+  width: 400px;
 }
 
 section#hero div.overlay {
-	background-color: rgba(60, 72, 88, 0.7);
-	background-color: rgba(60, 72, 88, 0.771);
-	/* background-color: rgba(60, 72, 88, 0.9); */
-	position: absolute;
-	top: 0;
-	right: 0;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	height: 100%;
+  /* background-color: rgba(60, 72, 88, 0.256); */
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
 }
 
 section#hero div.content {
-	/* min-height: 500px; */
-	margin-top: 100px;
-	margin-bottom: 100px;
-	position: relative;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
+  /* min-height: 500px; */
+  margin-top: 100px;
+  margin-bottom: 100px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
-section#hero div.content .profile-image{
-	height: 250px;
-	width: 250px;
-	border-radius: 50%;
-	background-color: var(--cl-secondary);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-	border: 3px solid var(--cl-secondary);
+section#hero div.content .profile-image {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  background-color: var(--cl-secondary);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 3px solid var(--cl-secondary);
 }
 
 section#hero div.content img.image-dp {
-	height: 150px;
-	max-width: 100%;
-	border: 5px solid #dee2e6;
-	border-radius: 50% !important;
+  height: 150px;
+  max-width: 100%;
+  border: 5px solid #dee2e6;
+  border-radius: 50% !important;
 }
 
 section#hero div.content .heading {
-	font-size: var(--fs-lg);
-	margin-top: 0.5em;
+  font-size: var(--fs-lg);
+  margin-top: 0.5em;
 }
 section#hero div.content .designation {
-	font-size: var(--fs-sm);
-	font-weight: var(--fw-400);
-	margin-top: 0.15em;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-400);
+  margin-top: 0.15em;
 }
 
 section#hero div.content section#hero-btn {
-	margin-top: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 section#hero div.content > * {
-	position: relative;
-	text-align: center;
-	margin: 10px auto;
+  position: relative;
+  text-align: center;
+  margin: 10px auto;
 }
 
 @media screen and (min-width: 480px) {
-	section#hero {
-		padding: 2em;
-	}
-	section#hero div.content {
-		/* min-height: 550px; */
-		margin-top: 70px;
-		margin-bottom: 100px;
-	}
-	section#hero div.content img.image-dp {
-		height: 200px;
-		width: auto
-	}
+  section#hero {
+    padding: 2em;
+  }
+  section#hero div.content {
+    /* min-height: 550px; */
+    margin-top: 70px;
+    margin-bottom: 100px;
+  }
+  section#hero div.content img.image-dp {
+    height: 200px;
+    width: auto;
+  }
 }
 @media screen and (min-width: 768px) {
-	section#hero {
-		background-attachment: fixed;
-		background-attachment: scroll;
-	}
+  section#hero {
+    background-attachment: fixed;
+    background-attachment: scroll;
+  }
 }
 @media screen and (min-width: 1024px) {
 }
@@ -122,8 +120,12 @@ section#hero div.content > * {
 }
 
 @keyframes rotate {
-	from {transform: rotate(0deg);}
-	to {transform: rotate(360deg);}
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Mutate For Animations */
